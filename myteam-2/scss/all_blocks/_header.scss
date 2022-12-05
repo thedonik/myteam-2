@@ -1,0 +1,148 @@
+.header {
+    padding-top: 48px;
+    
+    &__container {
+    }
+    
+    &__wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    &__logo {
+        margin-right: 80px;
+    }
+    
+    &__logo-img {
+    }
+    
+    &__btn, &__btn-close {
+        background: none;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        width: 20px;
+        height: 17px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    &__burger, &__close {
+        width: 20px;
+        height: 17px;
+        object-fit: contain;
+    }
+
+    &__btn {
+        @media only screen and (min-width: 600px) {
+            display: none;
+        }
+    }
+    
+    
+    
+    
+    
+    
+    &__right {
+        position: absolute;
+        top: -200%;
+        right: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(1, 77, 86, 0.3);
+        display: flex;
+        justify-content: flex-end;
+        transition: all 1s ease;
+        
+        @media only screen and (min-width: 600px) {
+            position: static;
+            max-width: 870px;
+            width: 100%;
+            height: auto;
+        }
+    }
+    
+    &__nav {
+        background-color: #255257;
+        max-width: 255px;
+        width: 100%;
+        padding: 56px 25px 25px 48px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        
+        @media only screen and (min-width: 600px) {
+            padding: 0;
+            flex-direction: row;
+            background: none;
+            max-width: 870px;
+            align-items: center;
+            justify-content: space-between;
+        }
+    }
+    
+    &__btn-close {
+        margin-bottom: 39px;
+        align-self: flex-end;
+
+        @media only screen and (min-width: 600px) {
+            display: none;
+        }
+    }
+    
+    &__close {
+    }
+    
+    &__list {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 36px;
+
+        @media only screen and (min-width: 600px) {
+            flex-direction: row;
+            margin: 0;
+        }
+    }
+    
+    &__item {
+        & + & {
+            margin-top: 24px;
+
+            @media only screen and (min-width: 600px) {
+                margin: 0;
+                margin-left: 40px;
+            }
+        }
+    }
+    
+    &__link {
+        color: white;
+    }
+    
+    &__call {
+        display: inline-block;
+        font-size: 18px;
+        line-height: 28px;
+        text-align: center;
+        color: #FFFFFF;
+        padding: 10px 33px;
+        border: 2px solid #FFFFFF;
+        border-radius: 24px;
+    }
+    
+    
+}
+
+
+.header--open {
+    .header{
+        &__right {
+            top: 0;
+        }
+    }
+}
+
